@@ -364,13 +364,13 @@ def UCTPlayGame():
     """ Play a sample game between two UCT players where each player gets a different number 
         of UCT iterations (= simulations = tree nodes).
     """
-    state = OthelloState(10) # uncomment to play Othello on a square board of the given size
-    #state = OXOState() # uncomment to play OXO
+    #state = OthelloState(10) # uncomment to play Othello on a square board of the given size
+    state = OXOState() # uncomment to play OXO
    # state = NimState(15) # uncomment to play Nim with the given number of starting chips
     while (state.GetMoves() != []):
         print str(state)
         if state.playerJustMoved == 1:
-            m = UCT(rootstate = state, itermax = 1000, verbose = False) # play with values for itermax and verbose = True
+            m = UCT(rootstate = state, itermax = 1000, verbose = True) # play with values for itermax and verbose = True
         else:
             m = UCT(rootstate = state, itermax = 100, verbose = False)
         print "Best Move: " + str(m) + "\n"
