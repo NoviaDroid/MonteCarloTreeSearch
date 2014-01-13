@@ -1,1 +1,4 @@
 https://github.com/rasmusgreve/MCTSMario
+
+change the Art.java line 35 to : final static String img = curDir + "/img/";
+make could read img file.
